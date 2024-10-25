@@ -23,11 +23,12 @@ darts_flavor = LazyLoader(
 )
 
 # Define some variables to use accross the project
+ROOTH_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 PROJECT_ROOT_PATH = os.environ["HOME"] # os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "forecasting")
 PROJECT_DATA_PATH = os.path.join(PROJECT_ROOT_PATH, "data")
 
-load_environment_vars(PROJECT_ROOT_PATH)
+load_environment_vars(ROOTH_PATH)
 
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
