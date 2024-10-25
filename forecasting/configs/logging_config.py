@@ -3,11 +3,11 @@ import sys
 
 from loguru import logger
 
-from forecasting import PROJECT_DATA_PATH # custom-event
+from forecasting import PROJECT_SRC_PATH
 
 
 def setup_logger():
-    LOG_PATH = os.path.join(PROJECT_DATA_PATH, "logs")   # custom-event
+    LOG_PATH = os.path.join(PROJECT_SRC_PATH, "logs")
     os.makedirs(LOG_PATH, exist_ok=True)
 
     fmt = "{time} - {file.name} - {level} - {message}"
