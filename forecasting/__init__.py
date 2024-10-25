@@ -23,7 +23,7 @@ darts_flavor = LazyLoader(
 )
 
 # Define some variables to use accross the project
-PROJECT_ROOT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+PROJECT_ROOT_PATH = os.environ["HOME"] # os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "forecasting")
 PROJECT_DATA_PATH = os.path.join(PROJECT_ROOT_PATH, "data")
 
