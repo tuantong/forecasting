@@ -25,13 +25,16 @@ darts_flavor = LazyLoader(
 )
 
 # Define some variables to use accross the project
-PROJECT_ROOT_PATH = os.environ["HOME"] # custom-event
-PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "forecasting")
+PROJECT_ROOT_PATH = os.environ["LAMBDA_TASK_ROOT"] # custom-event
+# PROJECT_ROOT_PATH = "/Users/Apple/Desktop/CBI/custom-event/docker"
+PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "log")
 PROJECT_DATA_PATH = os.path.join(PROJECT_ROOT_PATH, "data")
 PROJECT_DEBUG_PATH = os.path.join(PROJECT_ROOT_PATH, "debug") # custom-event
 
 load_environment_vars(os.environ["LAMBDA_TASK_ROOT"]) # custom-event
+# load_environment_vars("/Users/Apple/Desktop/CBI/custom-event/docker")
 PROJECT_CONFIG_PATH = os.path.join(os.environ["LAMBDA_TASK_ROOT"], "config") # custom-event
+# PROJECT_CONFIG_PATH = "/Users/Apple/Desktop/CBI/custom-event/docker/config"
 
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
