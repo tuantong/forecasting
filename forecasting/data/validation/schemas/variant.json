@@ -1,0 +1,162 @@
+{
+    "schema_type": "dataframe",
+    "version": "0.18.0",
+    "columns": {
+        "product_id": {
+            "title": "Product ID",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "name": {
+            "title": "Name of Variant",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "product_type": {
+            "title": "Product Type of Variant",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "tags": {
+            "title": "Tags",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "collections": {
+            "title": "Collections",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "variant_id": {
+            "title": "Variant ID",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "price": {
+            "title": "Price of Variant",
+            "description": null,
+            "dtype": "float32",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "color": {
+            "title": "Variant Color",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": true,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "size": {
+            "title": "Variant Size",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": true,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "status": {
+            "title": "Variant Status",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "created_date": {
+            "title": "Variant Created Date",
+            "description": null,
+            "dtype": "datetime64[ns]",
+            "nullable": false,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        },
+        "image": {
+            "title": "Variant Image URL",
+            "description": null,
+            "dtype": "string[python]",
+            "nullable": true,
+            "checks": null,
+            "unique": false,
+            "coerce": true,
+            "required": true,
+            "regex": false
+        }
+    },
+    "checks": null,
+    "index": [
+        {
+            "title": null,
+            "description": null,
+            "dtype": "int64",
+            "nullable": false,
+            "checks": null,
+            "name": null,
+            "unique": false,
+            "coerce": false
+        }
+    ],
+    "dtype": null,
+    "coerce": true,
+    "strict": false,
+    "name": null,
+    "ordered": false,
+    "unique": null,
+    "report_duplicates": "all",
+    "unique_column_names": false,
+    "add_missing_columns": false,
+    "title": null,
+    "description": null
+}
