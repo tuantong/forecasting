@@ -14,6 +14,8 @@ def load_environment_vars(root_path: str):
     dotenv_path = os.path.join(root_path, dotenv_file)
     load_dotenv(dotenv_path=dotenv_path, verbose=True, override=True)
     print(f"Loaded environment variables from {dotenv_path}")
+    for key, value in os.environ.items():
+        print(f"{key}: {value}")
 
 
 darts_flavor = LazyLoader(
