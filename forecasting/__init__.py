@@ -28,10 +28,10 @@ darts_flavor = LazyLoader(
 PROJECT_ROOT_PATH = "/tmp" # custom-event
 PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "forecasting")
 PROJECT_DATA_PATH = os.path.join(PROJECT_ROOT_PATH, "data")
-PROJECT_CONFIG_PATH = os.path.join(PROJECT_ROOT_PATH, "config") # custom-event
 PROJECT_DEBUG_PATH = os.path.join(PROJECT_ROOT_PATH, "debug") # custom-event
 
-load_environment_vars(PROJECT_ROOT_PATH)
+load_environment_vars(os.environ["LAMBDA_TASK_ROOT"]) # custom-event
+PROJECT_CONFIG_PATH = os.path.join(os.environ["LAMBDA_TASK_ROOT"], "config") # custom-event
 
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
