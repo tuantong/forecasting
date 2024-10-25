@@ -249,5 +249,3 @@ def create_client(
 
 aws_client = create_client()
 s3_data_service = AWSStorage(client=aws_client, bucket=RAW_DATA_BUCKET)
-s3_input_data_service = AWSStorage(client=aws_client, bucket="conative-ai-dev") # custom-event
-s3_output_data_service = AWSStorage(client=aws_client, bucket="ml-datastore.conative.ai") # custom-event
