@@ -3,6 +3,7 @@ import os
 import boto3
 from boto3.exceptions import S3UploadFailedError
 from botocore.exceptions import ClientError
+from botocore.exceptions import NoCredentialsError # custom-event
 
 from forecasting import (
     AWS_ACCESS_KEY_ID,
@@ -240,9 +241,9 @@ def create_client(
     if not client:
         client = boto3.client(
             "s3",
-            aws_access_key_id=aws_access_key_id,
-            aws_secret_access_key=aws_secret_access_key,
-            region_name=region_name,
+            # aws_access_key_id=aws_access_key_id,  # custom - event
+            # aws_secret_access_key=aws_secret_access_key, # custom - event
+            # region_name=region_name, # custom - event
         )
     return client
 
