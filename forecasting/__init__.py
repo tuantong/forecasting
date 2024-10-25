@@ -23,7 +23,7 @@ darts_flavor = LazyLoader(
 )
 
 # Define some variables to use accross the project
-PROJECT_ROOT_PATH = "/Users/Apple/Desktop/CBI/custom-event/tmp" # custom-event
+PROJECT_ROOT_PATH = "/tmp" # custom-event
 PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "forecasting")
 PROJECT_DATA_PATH = os.path.join(PROJECT_ROOT_PATH, "data")
 PROJECT_CONFIG_PATH = os.path.join(PROJECT_ROOT_PATH, "config") # custom-event
