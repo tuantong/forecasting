@@ -9,6 +9,8 @@ from forecasting import (
     AWS_REGION,
     AWS_SECRET_ACCESS_KEY,
     RAW_DATA_BUCKET,
+    AWS_BUCKET_NAME,
+    AWS_BUCKET_FORECAST_NAME
 )
 from forecasting.configs import logger
 
@@ -249,3 +251,5 @@ def create_client(
 
 aws_client = create_client()
 s3_data_service = AWSStorage(client=aws_client, bucket=RAW_DATA_BUCKET)
+s3_input_data_service = AWSStorage(client=aws_client, bucket=AWS_BUCKET_NAME) # custom-event
+s3_output_data_service = AWSStorage(client=aws_client, bucket=AWS_BUCKET_FORECAST_NAME) # custom-event
