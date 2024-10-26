@@ -6,9 +6,9 @@ from botocore.exceptions import ClientError
 from botocore.exceptions import NoCredentialsError # custom-event
 
 from forecasting import (
-    AWS_ACCESS_KEY_ID,
-    AWS_REGION,
-    AWS_SECRET_ACCESS_KEY,
+    CBI_AWS_ACCESS_KEY_ID,
+    CBI_AWS_REGION,
+    CBI_AWS_SECRET_ACCESS_KEY,
     RAW_DATA_BUCKET,
 )
 from forecasting.configs import logger
@@ -222,9 +222,9 @@ class AWSStorage:
 
 
 def create_client(
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
-    region_name=AWS_REGION,
+    aws_access_key_id=CBI_AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=CBI_AWS_SECRET_ACCESS_KEY,
+    region_name=CBI_AWS_REGION,
 ) -> boto3.client:
     """
     Create an S3 client.
@@ -241,9 +241,9 @@ def create_client(
     if not client:
         client = boto3.client(
             "s3",
-            # aws_access_key_id=aws_access_key_id,  # custom - event
-            # aws_secret_access_key=aws_secret_access_key, # custom - event
-            # region_name=region_name, # custom - event
+            aws_access_key_id=aws_access_key_id,  # custom - event
+            aws_secret_access_key=aws_secret_access_key, # custom - event
+            region_name=region_name, # custom - event
         )
     return client
 
