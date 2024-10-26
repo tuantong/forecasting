@@ -11,7 +11,7 @@ from dateutil.relativedelta import SU, relativedelta
 from forecasting import (
     AWS_FORECAST_HISTORY_BUCKET_NAME,
     PROJECT_DATA_PATH,
-    PROJECT_ROOT_PATH,
+    PROJECT_ROOT_PATH, PROJECT_CONFIG_PATH, # custom-event
     S3_FORECAST_DATA_DIR,
 )
 from forecasting.configs import logger
@@ -36,7 +36,7 @@ class ForecastMonitor:
     """Class for monitoring forecast accuracy."""
 
     _prediction_filename = "predictions.csv"
-    _data_config_path = os.path.join(PROJECT_ROOT_PATH, "config", "sample_config.yaml")
+    _data_config_path = os.path.join(PROJECT_CONFIG_PATH, "sample_config.yaml") # custom-event
     _BRANDS_TO_CREATE_ALL_CHANNELS = ["mizmooz", "as98"]
 
     def __init__(
