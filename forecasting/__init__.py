@@ -15,6 +15,7 @@ def load_environment_vars(root_path: str):
     load_dotenv(dotenv_path=dotenv_path, verbose=True, override=True)
     print(f"Loaded environment variables from {dotenv_path}")
 
+
 darts_flavor = LazyLoader(
     "forecasting.models.mlflow.darts_flavor",
     globals(),
@@ -23,19 +24,16 @@ darts_flavor = LazyLoader(
 
 # Define some variables to use accross the project
 PROJECT_ROOT_PATH = os.environ["HOME"] # custom-event
-# PROJECT_ROOT_PATH = "/Users/Apple/Desktop/CBI/custom-event/docker"
 PROJECT_SRC_PATH = os.path.join(PROJECT_ROOT_PATH, "log")
 PROJECT_DATA_PATH = os.path.join(PROJECT_ROOT_PATH, "data")
 PROJECT_DEBUG_PATH = os.path.join(PROJECT_ROOT_PATH, "debug") # custom-event
 
 load_environment_vars(os.environ["LAMBDA_TASK_ROOT"]) # custom-event
-# load_environment_vars("/Users/Apple/Desktop/CBI/custom-event/docker")
 PROJECT_CONFIG_PATH = os.path.join(os.environ["LAMBDA_TASK_ROOT"], "config") # custom-event
-# PROJECT_CONFIG_PATH = "/Users/Apple/Desktop/CBI/custom-event/docker/config"
 
-# AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
-# AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
-# AWS_REGION = os.environ["AWS_REGION"]
+CBI_AWS_ACCESS_KEY_ID = os.environ["CBI_AWS_ACCESS_KEY_ID"]
+CBI_AWS_SECRET_ACCESS_KEY = os.environ["CBI_AWS_SECRET_ACCESS_KEY"]
+CBI_AWS_REGION = os.environ["CBI_AWS_REGION"]
 AWS_FORECAST_DATA_BUCKET = os.environ["AWS_BUCKET_FORECAST_NAME"]
 RAW_DATA_BUCKET = os.environ["AWS_DATA_BUCKET"]
 S3_RAW_DATA_DIR = os.environ["S3_RAW_DATA_DIR"]
