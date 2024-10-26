@@ -33,9 +33,9 @@ load_environment_vars(os.environ["LAMBDA_TASK_ROOT"]) # custom-event
 PROJECT_CONFIG_PATH = os.path.join(os.environ["LAMBDA_TASK_ROOT"], "config") # custom-event
 # PROJECT_CONFIG_PATH = "/Users/Apple/Desktop/CBI/custom-event/docker/config"
 
-AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
-AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
-AWS_REGION = os.environ["AWS_REGION"]
+# AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
+# AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
+# AWS_REGION = os.environ["AWS_REGION"]
 AWS_FORECAST_DATA_BUCKET = os.environ["AWS_BUCKET_FORECAST_NAME"]
 RAW_DATA_BUCKET = os.environ["AWS_DATA_BUCKET"]
 S3_RAW_DATA_DIR = os.environ["S3_RAW_DATA_DIR"]
